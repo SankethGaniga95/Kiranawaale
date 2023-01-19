@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KiranaWaale</title>
+    <link rel = "icon" href ="./images/KW.png" 
+            type = "image/x-icon">
+    <link rel="stylesheet" type="text/css" href="CreateACC.css"/>
+</head>
+<body>
+    <div id="logo">
+    <img src="./images/KW (2) logo.png" alt=""  >
+    </div>
+    <form id="AccountPage">
+    <h2 id="header">Create Account</h2>
+    <h4>Your name</h4>
+    <input type="text" placeholder="First and Last Name" id="name" required>
+    <h4>Mobile Number</h4>
+    <input type="number" placeholder="Mobile number" id="mobile" required>
+    <h4>Email</h4>
+    <input type="email" palceholder="Email Id" id="email" required>
+    <h4>Password</h4>
+    <input type="password" placeholder="At least 6 characters" id="password" pattern=".{6,}" required>
+    <p>Password must be at least 6 characters</p>
+    <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
+<script src="./CreateACC.js"></script>

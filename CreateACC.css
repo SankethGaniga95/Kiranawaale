@@ -1,0 +1,50 @@
+
+
+
+
+#AccountPage{
+    padding-top:30px;
+    width:25%;
+    height:600px;
+    margin:auto;
+    display:block;
+    padding-left:30px;
+    margin-top:100px;
+    font-size:18px; 
+    font-family:Arial, Helvetica, sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   
+}
+#AccountPage>input{
+    width:90%;
+    height:25px;
+    margin-top:-10px
+}
+#AccountPage>input:nth-child(11){
+    width:93%;
+    height:32px;
+    background-color:gold;
+    margin-top:20px;
+}
+#AccountPage>p{
+    font-size:12px;
+    font-family:Arial, Helvetica, sans-serif
+}
+#logo{
+   
+    margin:auto;
+    margin-bottom:-90px;
+    display:flex;
+    justify-content:center;
+   
+
+    
+}
+#logo>img{
+    width:300px;
+    border-radius:50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border:5px solid black;
+
+
+}
