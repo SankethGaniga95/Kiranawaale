@@ -1,4 +1,3 @@
-/* <style> */
 body{
     margin:0px;
    
@@ -11,12 +10,17 @@ align-items:center;
 height:60px;
 background-color:black;
 
+
+
+
 }
 #left{
   display:flex;
   justify-content:space-around;
   align-items:center;
   width:60%;
+
+  
 }
 #left>img{
   height:35px;
@@ -45,9 +49,10 @@ background-color:black;
     color:black;
 }
 .dropdown:hover .dropdown-content {
- display: block;
+ display: grid; 
+ grid-template-columns:repeat(3,1fr)
  
-}
+} 
 .dropdown-content>p:hover  {
     text-decoration:underline;
 }
@@ -58,6 +63,7 @@ background-color:black;
     height:40px;
     justify-content:space-around;
     align-items:center;
+  
 }
 #Search{
     height:35px;
@@ -65,25 +71,24 @@ background-color:black;
     font-size:14px;
     border-radius:5px;
     padding-left:10px;
-}
-#signin{
-
-    width:6%;
-   
-}
-#signin>img{
-    width:23px;
-    padding-left:10px;
-    display:block;
-}
-#signin>a{
-    color:white;
-     text-decoration:none;
-   
     
-
+   
 }
 
+#foodcontainer{
+    border:2px solid green;
+    width:80%;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr)
+}
+#foodcontainer>div{
+border:2px solid black;
 
 
-/* </style> */
+}
+#foodcontainer>div>img{
+  margin-left:80px;
+  width:150px
+    
+}
