@@ -15,24 +15,11 @@
     <div class="nav">
         <div id="left">
         <img src="./images/KW (2) logo.png" alt="">
-        <div class="dropdown">
-            <span>Categories</span>
-            <div class="dropdown-content">
-                <p id="Food & Beverage">Food & Beverage</p>
-                 <p id="Beaut">Beauty</p>
-                <p id="Cleanin">Cleaning</p>
-                <p id="Personal Car">Personal Care</p>
-                <p id="Toy">Toys</p>
-                <p id="Bab">Baby</p>
-                <p id="Healt">Health</p>
-                <p id="Househol">Household</p>
-                <p id="Party & Occasion">Party & Occasions</p> 
-            </div>
-        </div>
+      
 
         <a href="">Coupon & Deals</a>
         <a href="">Weekly Ads</a>
-        <a href="">My Cart</a>
+        <a href="./Cart.html">My Cart</a>
         </div>
 
         <div id="right">
@@ -42,17 +29,38 @@
         </form>
         </div>
 </div> 
-        <select id="filter">
-            <option value="">Filter By Category</option>
-            <option value="4.4">4.4</option>
-            <option value="4.3">4.3</option>
-            <option value="3.9">3.9</option>
-        </select>
+        <div id="foodpage">
+        <div id="foodsidebar" >
+       
+            <select id="filter">
+                <option value="">Filter By Rating</option>
+                <option value="5">5</option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+            </select>
+            <hr>
+            <div class="dropdown">
+                <span>Categories</span>
+                <div class="dropdown-content">
+                    <p id="Food & Beverage">Food & Beverage</p>
+                     <p id="Beaut">Beauty</p>
+                    <p id="Cleanin">Cleaning</p>
+                    <p id="Personal Car">Personal Care</p>
+                    <p id="Toy">Toys</p>
+                    <p id="Bab">Baby</p>
+                    <p id="Healt">Health</p>
+                    <p id="Househol">Household</p>
+                    <p id="Party & Occasion">Party & Occasions</p> 
+                </div>
+            </div>
 
-
+        </div>
         <div id="foodcontainer">
 
         </div>
+    </div>
 </body>
 </html>
 <script>
@@ -88,20 +96,20 @@
      }
 
 
-
+     let cartArr=JSON.parse(localStorage.getItem("cart")) || []
      let container=document.getElementById("foodcontainer");
      function DisplayFood(data){
         container.innerHTML=null;
         data.forEach((food)=>{
             let card=document.createElement("div")
-
+            let imgdiv=document.createElement("div")
             let img=document.createElement("img")
             img.src=food.img;
 
             let name=document.createElement("h2")
             name.textContent=food.name;
 
-            let price=document.createElement("h3")
+            let price=document.createElement("h4")
             price.textContent=`₹${food.price}`;
 
             let rating=document.createElement("h4")
@@ -109,10 +117,32 @@
 
             let desc=document.createElement("p")
             desc.textContent=food.desc;
-            
-            card.append(img,name,price,rating,desc)
+             
+            let addToCart=document.createElement("button")
+            addToCart.textContent="Add to Cart"
+
+            addToCart.addEventListener("click",()=>{
+                if(checkDuplicate(food)){
+                    alert("Product Already in Cart")
+                }else{
+                    cartArr.push({...food,quantity:1})
+                localStorage.setItem("cart",JSON.stringify(cartArr))
+                alert("Product Added in Cart")
+                }
+            })
+            imgdiv.append(img)
+            card.append(imgdiv,name,price,rating,desc,addToCart)
             container.append(card)
 
         })
+     }
+
+     function checkDuplicate(food){
+        for(let i=0;i<cartArr.length;i++){
+            if(cartArr[i].id===food.id){
+                return true
+            }
+        }
+        return false
      }
 </script>

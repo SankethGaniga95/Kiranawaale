@@ -4,7 +4,7 @@
          "name":"Aashirvaad Salt,with 4-Step advantage, 1kg",
          "id": "1",
          "img":"https://m.media-amazon.com/images/I/81NrftYFxsL._AC_UL320_.jpg",
-         "rating":"4.4",
+         "rating":"5",
          "price":"24",
          "desc":"Aashirvaad Iodised Salt is made with the 4-step advantage process which ensures its good quality"
     },
@@ -12,7 +12,7 @@
         "name":"Tata Tea Premium | Desh Ki Chai, 1.5kg",
         "id":"2",
         "img":"https://m.media-amazon.com/images/I/51QF8woKr5S._AC_UL320_.jpg",
-        "rating":"4.4",
+        "rating":"4",
         "price":"499",
         "desc":"Desh ki Chai: Tata Tea Premium has a unique taste that chai lovers across India will enjoy,"
    },
@@ -20,7 +20,7 @@
     "name":"Safe Harvest Sona Masoori Raw Rice (12 Months), 5kg",
     "id":"3",
     "img":"https://m.media-amazon.com/images/I/81v0Plrq0XL._AC_UL320_.jpg",
-    "rating":"3.9",
+    "rating":"2",
     "price":"251",
     "desc":"Original sona masuri variety BPT 5204"
 },
@@ -28,7 +28,7 @@
     "name":"Vedaka Popular Toor Dal, 1kg",
     "id":"4",
     "img":"https://m.media-amazon.com/images/I/91yQ36gHYuL._AC_UL320_.jpg",
-    "rating":"4.3",
+    "rating":"2",
     "price":"179",
     "desc":"Store in a cool dry place Vedaka popular toor dal"
 },
@@ -36,7 +36,7 @@
     "name":"NESCAFÉ 3 In 1 Original Soluble Ground Coffee Beverage",
     "id":"5",
     "img":"https://m.media-amazon.com/images/I/61fGbBLOjDL._AC_UL320_.jpg",
-    "rating":"4.1",
+    "rating":"3",
     "price":"419",
     "desc":"Can be presented for 30 cups; made from the best Indonesian Robusta Coffee"
 },
@@ -44,7 +44,7 @@
     "name":"Bournvita Health Drink, 500 gm refill pack",
     "id":"6",
     "img":"https://m.media-amazon.com/images/I/71CNlML+cbL._AC_UL320_.jpg",
-    "rating":"4.5",
+    "rating":"4",
     "price":"209",
     "desc":"8 immunity nutrients - Vitamins (A, B12, C, D), Zinc, Iron, Copper and Selenium - contributes to the normal function of the immune system"
 },
@@ -52,17 +52,25 @@
     "name":"Tang Orange Instant Drink Mix, 750 g",
     "id":"7",
     "img":"https://m.media-amazon.com/images/I/61WJbJqQGjL._AC_UL320_.jpg",
-    "rating":4.4,
+    "rating":"3",
     "price":"220",
     "desc":"Filled with the goodness of orange and enriched with vitamin a, b, c and iron. Allergens Included:No"
 },
 {
-    "name":"Paper Boat Jaljeera (Pack of 6, 200ml each)",
+    "name":"Horlicks Health & Nutrition Drink 500 g Jar",
     "id":"8",
-    "img":"https://m.media-amazon.com/images/I/71H2mkyJ7SL._AC_UL320_.jpg",
-    "rating":"4.3",
-    "price":"162",
-    "desc":"The perfect infusion of cumin, lemon juice, black pepper and rock salt that functions both as an electrolyte and an appetizer"
+    "img":"https://m.media-amazon.com/images/I/511GcxShzVL._AC_UL320_.jpg",
+    "rating":"4",
+    "price":"257",
+    "desc":"Health Drink that has nutrients to support immunity.;Clinically proven to improve 5 signs of growth"
+},
+{
+    "name":"Nescafe Drink Mocha Can, Low Fat Milk Coffee Drink - 240 ML",
+    "id":"9",
+    "img":"https://m.media-amazon.com/images/I/512wKWklvzL._AC_UL320_.jpg",
+    "rating":"1",
+    "price":"150",
+    "desc":"It is a delicious, chilled ready to drink coffee"
 }
 
 ]
