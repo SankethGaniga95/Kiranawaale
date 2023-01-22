@@ -7,21 +7,129 @@
     <title>KiranaWaale</title>
     <link rel = "icon" href ="./KW.png" 
             type = "image/x-icon">
-
-   
-    <link rel="stylesheet" type="text/css" href="login.css" />
+    
+    <style>
+        #login{
+            padding-top:30px;
+            width:25%;
+            height:500px;
+            margin:auto;
+            display:block;
+            padding-left:30px;
+            margin-top:130px;
+            font-size:18px; 
+            font-family:Arial, Helvetica, sans-serif;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+           
+        }
+        #login>input{
+            width:90%;
+            height:40px;
+            margin-top:-10px;
+            font-size:18px
+        }
+        #login>input:nth-child(7){
+            width:93%;
+            height:40px;
+            background-color:gold;
+            margin-top:20px;
+            font-size:23px;
+            
+        }
+        #login>p{
+            /* font-weight:bold; */
+            font-size:20px;
+            font-family:Arial, Helvetica, sans-serif
+        }
+        #loginbtn{
+            width:23%;
+            height:40px;
+            background-color:black;
+            color:white;
+            font-size:23px;
+            position:absolute;
+            left:585px;
+            bottom:80px
+        }
+        #logo{
+           
+            margin:auto;
+            margin-bottom:-90px;
+            display:flex;
+            justify-content:center;
+           
+        
+            
+        }
+        #logo>img{
+            width:300px;
+            border-radius:50px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border:5px solid black;
+        
+        
+        }
+ #confirm {
+    display: none;
+    background-color: #F3F5F6;
+    color: #000000;
+    border: 1px solid #aaa;
+    position: fixed;
+    width: 600px;
+    height: 300px;
+    left: 30%;
+    top: 33%;
+    box-sizing: border-box;
+    text-align: center;
+    font-size:30px;
+    padding-top:40px;
+ }
+ #confirm button {
+    background-color:yellow;
+    /* display: inline-block; */
+    border-radius: 12px;
+    border: 2px solid #aaa;
+    padding: 10px 40px;
+    text-align: center;
+  
+    cursor: pointer;
+    position:relative;
+     top:30px;
+    font-size:20px
+ }
+ #confirm .message {
+    text-align: center;
+ }
+ #invalidmsg{
+    color:red;
+    font-weight:bold;
+ }
+        
+        </style>
 </head>
 <body>
+    <div id="logo">
+     <img src="./images/newimg.png" alt=""  id="logoimg" >
+    </div>
     <form id="login">
      <h2>Login</h2>
      <p>Email</p>
-     <input type="email" placeholder="Enter your email-id" required>
+     <input type="email" placeholder="Enter your email-id" id="email" required>
      <p>Password</p>
-     <input type="text" palceholder="Enter your password" required>
-     <input type="submit" value="submit">
-     <button>Create Account</button>
-    
+     <input type="text" palceholder="Enter your password" id="password" required>
+     <p>Password must be at least 6 characters</p>
+     <input type="submit" value="Submit">
+     <p id="invalidmsg"></p>
     </form>
+    <button id="loginbtn">Create Account</button>
+
+
+    <div id="confirm">
+        <div class="message">Account Created Succesfully!
+           Please Login before buying from Kiranawaale
+        </div><br>
+        <button class="yes">Login</button>
+     </div>
     
 </body>
 </html>
