@@ -7,14 +7,15 @@
     <title>KiranaWaale</title>
     <link rel = "icon" href ="./images/KW.png" 
             type = "image/x-icon">
-
-   
+            <!-- carticon----- -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <!-- -----------------------------------carticon----------- -->
     <link rel="stylesheet" type="text/css" href="cart.css" />
 </head>
 <body>
     <div class="nav">
         <div id="left">
-        <img src="./images/newimg.png" alt="">
+        <img src="./images/newimg.png" alt="" id="refresh">
         <div class="dropdown">
             <span>Categories</span>
             <div class="dropdown-content">
@@ -32,7 +33,12 @@
 
         <a href="">Coupon & Deals</a>
         <a href="">Weekly Ads</a>
-        <a href="./Cart.html">My Cart</a>
+        <div id="carticon">
+            <a href="./Cart.html">My Cart</a>
+            <!-- ------------------------------------------carticon--------------------- -->
+          <i class="fa" style="font-size:24px">&#xf07a;</i>
+          <span class='badge badge-warning' id='lblCartCount'>0</span>
+        </div>
         </div>
 
         
@@ -173,8 +179,23 @@
 </body>
 </html>
 <script>
+ let refresh=document.getElementById("refresh")
+refresh.addEventListener("click", ()=>{
+  window.location.href="./index.html"  
+})
+
+let food=document.getElementById("Food & Beverage")
+food.addEventListener("click",()=>{
+  window.location.href="./Food.html"
+})
+
+
     let Cart=JSON.parse(localStorage.getItem("cart")) || [];
 
+    let carticon=document.getElementById("lblCartCount")
+carticon.textContent=Cart.length
+    let amount=document.getElementById("amount")
+        let discount=document.getElementById("discount")
     let total=document.getElementById("totalorder")
     let Container=document.getElementById("cartcontainer");
     function Display(data){
@@ -240,19 +261,25 @@
         }
         total.innerText=sum
 
-        let amount=document.getElementById("amount")
-        let discount=document.getElementById("discount")
+   
         let input=document.getElementById("coupon")
         let couponBtn=document.getElementById("couponbtn")
+        
+       
+        
         couponBtn.addEventListener("click",()=>{
     
             if(input.value=="25"){
             discount.innerText=sum*0.25
             amount.innerText=sum-(sum*0.25)
-            }else{
-            amount.innerText=sum
             }
         })
+        discount.innerText=0
+            amount.innerText=sum
+            
      }
      Display()
+
+
+
 </script>

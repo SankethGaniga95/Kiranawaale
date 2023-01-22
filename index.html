@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- -----------------------------courausel----------------------- -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-
+<!-- ---------------------------carticon---------------- -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <!-- -------------------------------carticon------------------------ -->
     <title>KiranaWaale</title>
     <link rel = "icon" href ="./images/KW.png" 
             type = "image/x-icon">
@@ -20,7 +22,7 @@
 <body>
     <div class="nav">
         <div id="left">
-        <img src="./images/newimg.png" alt="">
+        <img src="./images/newimg.png" alt="" id="refresh">
         <div class="dropdown">
             <span>Categories</span>
             <div class="dropdown-content">
@@ -42,6 +44,7 @@
       
         <div id="carticon">
           <a href="./Cart.html">My Cart</a>
+          <!-- ------------------------------------------carticon--------------------- -->
         <i class="fa" style="font-size:24px">&#xf07a;</i>
         <span class='badge badge-warning' id='lblCartCount'>0</span>
       </div>
@@ -49,9 +52,13 @@
         </div>
 
         <div id="right">
-        <form>
-        <input type="text" placeholder="Search for a product" id="Search">
+        <!-- <form>
+        <!-- <input type="text" placeholder="Search for a product" id="Search">
         <!-- <button>Search</button> -->
+        <!-- </form>  -->
+        <form>
+          <input type="search" placeholder="Search..." id="Search">
+          <button type="submit">Search</button>
         </form>
         </div>
 
@@ -302,4 +309,6 @@
 
 </body>
 </html>
-<script src="index.js"></script>
+
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="food.js"></script>

@@ -1,88 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-<!-- FontAwesome -->
-<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> -->
-
-<style>
-.navigation {
-  width: 100%;
-  height: 90px;
-  display: flex;
-  align-items: center;
-  border-top: 6px solid #d60e96;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>slide-in popup</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+}
+.container {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(96, 12, 230);
+}
+.open-btn {
+	font-size: 1rem;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	padding: 1rem 2.5rem;
+	cursor: pointer;
+}
+.popup {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	/* background-color: aqua; */
+}
+.popup-overlay {
+	background-color: rgba(0, 0, 0, 0.575);
+	height: 100vh;
+	width: 100%;
+	position: absolute;
+}
+.main-popup {
+	position: absolute;
+	left: 0;
+	height: 100vh;
+	width: 100%;
+	z-index: 1;
+	background: aqua;
+	padding: 30px 20px;
+	line-height: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: translateX(-100%);
+}
+.close-btn {
+	border: .6px solid white;
+	padding: 10px;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	font-size: 2rem;
+	cursor: pointer;
+	transition: .5s ease all;
+}
+.close-btn:hover {
+	background: white;
+}
+.popup-content p {
+	font-size: 1.5rem;
+	line-height: 2rem;
+}
+@keyframes slide-in {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+@keyframes slide-out {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
 }
 
-
-
-
-
-
-
-ul li a {
-  font-size: 1.1rem;
-  color: #343a40;
-}
-
-ul li a.cart:hover {
-  text-decoration: none;
-  color: #d60e96;
-}
-
-ul li a.cart .cart-basket {
-  font-size: .6rem;
-  position: absolute;
-  top: -6px;
-  right: -5px;
-  width: 15px;
-  height: 15px;
-  color: #fff;
-  background-color: #418deb;
-  border-radius: 50%;
-}
-</style>
+  </style>
 </head>
 <body>
-    <div class="header navigation">
-  
-  <div class="col-xl-9 col-lg-10 col-sm-8 col-7">
-
-    <ul class="navbar-nav flex-row justify-content-end flex-wrap align-items-center mr-lg-4 mr-xl-0">
-
-      
-
-
-     
-    
-      </li>
-      <li class="nav-item px-3 text-uppercase mb-0 position-relative d-lg-flex">
-        <div id="cart" class="d-none">
-
+  <div class="container">
+    <div class="btn">
+      <button class="open-btn">Click Me</button>
+    </div>
+    <div class="popup">
+      <div class="popup-overlay"></div>
+      <div class="main-popup">
+        <div class="popup-content">
+          <span class="close-btn">&times;</span>
+          <p>This is my popup</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus laborum, magni nulla alias excepturi atque. Corporis quaerat impedit cupiditate exercitationem eos maxime numquam amet itaque animi! Maxime cupiditate, aliquid repellat, assumenda excepturi esse obcaecati alias consequatur quidem earum quae optio!</p>
         </div>
-        <a href="/store/cart.stml" class="cart position-relative d-inline-flex" aria-label="View your shopping cart">
-          <i class="fas fa fa-shopping-cart fa-lg"></i>
-          <span class="cart-basket d-flex align-items-center justify-content-center">
-            0
-          </span>
-        </a>
-      </li>
-      <button id="sidenav-open-btn" class="menu-hamburger position-absolute pointer p-0">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </ul>
+      </div>
+    </div>
   </div>
-</div>
+  <script>const open_btn = document.querySelector('.open-btn');
+    const close_btn = document.querySelector('.close-btn');
+    const popup = document.querySelector('.popup');
+    const main_popup = document.querySelector('.main-popup');
+    
+    open_btn.addEventListener('click', () => {
+      popup.style.display = 'flex';
+      main_popup.style.cssText = 'animation:slide-in .5s ease; animation-fill-mode: forwards;';
+    });
+    
+    close_btn.addEventListener('click', () => {
+      main_popup.style.cssText = 'animation:slide-out .5s ease; animation-fill-mode: forwards;';
+      setTimeout(() => {
+        popup.style.display = 'none';
+      }, 500);
+    });
+    
+    window.addEventListener('click', (e) => {
+      if (e.target == document.querySelector('.popup-overlay')) {
+        main_popup.style.cssText = 'animation:slide-out .5s ease; animation-fill-mode: forwards;';
+        setTimeout(() => {
+          popup.style.display = 'none';
+        }, 500);
+      }
+    });
+    </script>
 </body>
 </html>

@@ -48,7 +48,10 @@ login.addEventListener("click", ()=>{
 // ----------------redirecting through cards------
 
 
-
+let refresh=document.getElementById("refresh")
+refresh.addEventListener("click", ()=>{
+  window.location.href="./index.html"  
+})
 let food=document.getElementById("Food & Beverages")
 food.addEventListener("click",()=>{
   window.location.href="./Food.html"
@@ -129,3 +132,26 @@ Part.addEventListener("click",()=>{
 let Cart=JSON.parse(localStorage.getItem("cart"));
 let carticon=document.getElementById("lblCartCount")
 carticon.textContent=Cart.length
+
+
+
+
+// -------------------------------------------searchpart---------------------------------
+// let searchForm=document.querySelector("form");
+
+//   searchForm.addEventListener("submit",(e)=>{
+//     e.preventDefault()
+//     let searchParams=searchForm.Search.value;
+//     console.log(searchParams)
+//     let filtered=Cart.filter((element)=>{
+//       if(element.name.toUpperCase().includes(searchParams.toUpperCase())===true){
+//         return true
+//       }else{
+//         return false
+//       }
+//     })
+//     filterData(filtered)
+//   })
+  
+
+

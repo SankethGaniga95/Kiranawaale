@@ -8,25 +8,44 @@
     <link rel = "icon" href ="./images/KW.png" 
             type = "image/x-icon">
 
-   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="food.css" />
 </head>
 <body>
     <div class="nav">
         <div id="left">
-        <img src="./images/KW (2) logo.png" alt="">
+        <img src="./images/newimg.png" alt="" id="refresh">
+        <div class="dropdown">
+            <span>Categories</span>
+            <div class="dropdown-content">
+                <p id="Food & Beverage">Food & Beverage</p>
+                 <p id="Beaut">Beauty</p>
+                <p id="Cleanin">Cleaning</p>
+                <p id="Personal Car">Personal Care</p>
+                <p id="Toy">Toys</p>
+                <p id="Bab">Baby</p>
+                <p id="Healt">Health</p>
+                <p id="Househol">Household</p>
+                <p id="Party & Occasion">Party & Occasions</p> 
+            </div>
+        </div>
       
 
         <a href="">Coupon & Deals</a>
         <a href="">Weekly Ads</a>
-        <a href="./Cart.html">My Cart</a>
+        <div id="carticon">
+            <a href="./Cart.html">My Cart</a>
+            <!-- ------------------------------------------carticon--------------------- -->
+          <i class="fa" style="font-size:24px">&#xf07a;</i>
+          <span class='badge badge-warning' id='lblCartCount'>0</span>
+        </div>
         </div>
 
         <div id="right">
-        <form>
-        <input type="text" placeholder="Search for a product" id="Search">
-        <!-- <button>Search</button> -->
-        </form>
+            <form >
+                <input type="text" placeholder="Search..." id="Search">
+                <input type="submit" value="Search" />
+              </form>
         </div>
 </div> 
         <div id="foodpage">
@@ -40,109 +59,122 @@
                 <option value="2">2</option>
                 <option value="1">1</option>
             </select>
-            <hr>
-            <div class="dropdown">
-                <span>Categories</span>
-                <div class="dropdown-content">
-                    <p id="Food & Beverage">Food & Beverage</p>
-                     <p id="Beaut">Beauty</p>
-                    <p id="Cleanin">Cleaning</p>
-                    <p id="Personal Car">Personal Care</p>
-                    <p id="Toy">Toys</p>
-                    <p id="Bab">Baby</p>
-                    <p id="Healt">Health</p>
-                    <p id="Househol">Household</p>
-                    <p id="Party & Occasion">Party & Occasions</p> 
+           
+            <div class="btn">
+                <button class="open-btn">Sort By Price</button>
+              </div>
+              <div class="popup">
+                <div class="popup-overlay"></div>
+                <div class="main-popup">
+                  <div class="popup-content">
+                    <span class="close-btn">&times;</span>
+
+
+                    <form  id="sort">
+                        <input type="checkbox" id="hightolow" value="h2l" >
+                        <label for="hightolow">Price:High to Low</label><br>
+                        <input type="checkbox" id="lowtohigh" value="l2h" >
+                        <label for="lowtohigh">Price:Low to High</label><br>
+                        <input type="submit" value="Go" id="Go">
+                      </form>
+                  </div>
                 </div>
-            </div>
+              </div>
+          
 
         </div>
         <div id="foodcontainer">
 
         </div>
     </div>
+
+
+    
+<div id="footer">
+    <div>
+    <div>
+    <h4>About KW</h4>
+    <hr>
+    <ul >
+    <li><a href="">KW Careers</a></li>
+    <li><a href="">About Us</a></li>
+    <li><a href="">Investor Information</a></li>
+    <li><a href="">Organizational Accounts</a></li>
+    <li><a href="">KW Me</a></li>
+    <li><a href="">Literacy Foundation</a></li>
+    <li><a href="">Newsroom</a></li>
+    <li><a href="">Alternative Dispute Resolution</a></li>
+    <li><a href="">Vendors</a></li>
+    <li><a href="">New Vendors</a></li>
+    <li><a href="">Serving Others</a></li>
+   </ul>
+   </div>
+   
+    <div>
+    <h4>Support</h4>
+    <hr>
+    <ul >
+     <li><a href="">Help Center</a></li>
+     <li><a href="">Track My Order</a></li>
+     <li><a href="">Product Recalls</a></li>
+     <li><a href="">Gift Card Balance</a></li>
+     <li><a href="">Accessibility Statement</a></li>
+     <li><a href="">Accessibility Support</a></li>
+     <li><a href="">California Supply Chain Act</a></li>
+     <li><a href="">California Privacy Notice for Employees, Applicants & Contractors</a></li>
+     <li><a href="">Your Privacy Choices</a></li>
+     <li><a href="">Cookie Preferences</a></li>
+    </ul>
+    </div>
+    
+    <div>
+    <h4>Stores</h4>
+    <hr>
+    <ul >
+     <li><a href="">Store Locator</a></li>
+     <li><a href="">Store Directory</a></li>
+     <li><a href="">Store Survey(receipt required)</a></li>
+     <li><a href="">KW Market</a></li>
+     <li><a href="">KW Market+pOpshelf</a></li>
+     <li><a href="">pOpshelf</a></li>
+     <li><a href="">KWx</a></li>
+    </ul>
+    </div>
+   
+    <div>
+     <h4>Services</h4>
+     <hr>
+     <ul >
+       <li><a href="">FedEx</a></li>
+       <li><a href="">DoorDash</a></li>
+       <li><a href="">KW Pickup</a></li>
+       <li><a href="">KW GO! & Cart Calculator</a></li>
+       <li><a href="">Download App</a></li>
+       <li><a href="">Coupons</a></li>
+       <li><a href="">spendwell</a></li>
+       <li><a href="">Western Union</a></li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div id="last">
+     <div>
+       <img src="https://www.dollargeneral.com/content/experience-fragments/dollargeneral/en/global-footer/master/_jcr_content/root/globalfooter/link-images/image.coreimg.100.300.png/1661991107545/foot-logo-dg-careers.png" alt="">
+     </div>
+     <div>
+     <img src="https://www.dollargeneral.com/content/experience-fragments/dollargeneral/en/global-footer/master/_jcr_content/root/globalfooter/app-images/image.coreimg.100.300.png/1661990967164/app-store.png" alt="">
+     <img src="https://www.dollargeneral.com/content/experience-fragments/dollargeneral/en/global-footer/master/_jcr_content/root/globalfooter/app-images/image_205323551.coreimg.100.300.png/1661990917826/google.png" alt="">
+   </div>
+   <div>
+     <img src="./images/Screenshot (62).png" alt="">
+   </div>
+   <p>Privacy | Terms</p>
+   <p>© Copyright 2023. Kiranawala General Corporation. All rights reserved.</p>
+   </div>
+   
 </body>
 </html>
-<script>
-    async function FetchData(){
-        try{
-            let res=await fetch("./data/Food.json")
-            res=await res.json()
-            console.log(res);
-            filterData(res.data)
-            //  DisplayFood(res.data)
-        }catch(err){
-            console.log(err)
-        }
-       
-    }
-     FetchData()
+<script type="text/javascript" src="food.js"></script>
 
 
-     let filterBy=document.getElementById("filter")
-     filterBy.addEventListener("change",()=>{
-        FetchData()
-     })
-     function filterData(data){
-        let filterValue=filterBy.value
-        if(filterValue===""){
-            DisplayFood(data)
-        }else{
-            data=data.filter((food)=>{
-                return food.rating==filterValue
-            })
-            DisplayFood(data)
-        }
-     }
-
-
-     let cartArr=JSON.parse(localStorage.getItem("cart")) || []
-     let container=document.getElementById("foodcontainer");
-     function DisplayFood(data){
-        container.innerHTML=null;
-        data.forEach((food)=>{
-            let card=document.createElement("div")
-            let imgdiv=document.createElement("div")
-            let img=document.createElement("img")
-            img.src=food.img;
-
-            let name=document.createElement("h2")
-            name.textContent=food.name;
-
-            let price=document.createElement("h4")
-            price.textContent=`₹${food.price}`;
-
-            let rating=document.createElement("h4")
-            rating.textContent=`Rating:-${food.rating}/5`;
-
-            let desc=document.createElement("p")
-            desc.textContent=food.desc;
-             
-            let addToCart=document.createElement("button")
-            addToCart.textContent="Add to Cart"
-
-            addToCart.addEventListener("click",()=>{
-                if(checkDuplicate(food)){
-                    alert("Product Already in Cart")
-                }else{
-                    cartArr.push({...food,quantity:1})
-                localStorage.setItem("cart",JSON.stringify(cartArr))
-                alert("Product Added in Cart")
-                }
-            })
-            imgdiv.append(img)
-            card.append(imgdiv,name,price,rating,desc,addToCart)
-            container.append(card)
-
-        })
-     }
-
-     function checkDuplicate(food){
-        for(let i=0;i<cartArr.length;i++){
-            if(cartArr[i].id===food.id){
-                return true
-            }
-        }
-        return false
-     }
-</script>
+    
