@@ -124,3 +124,8 @@ let Part=document.getElementById("Party & Occasion")
 Part.addEventListener("click",()=>{
   window.location.href="./Party.html"
 })
+
+
+let Cart=JSON.parse(localStorage.getItem("cart"));
+let carticon=document.getElementById("lblCartCount")
+carticon.textContent=Cart.length

@@ -14,7 +14,7 @@
 <body>
     <div class="nav">
         <div id="left">
-        <img src="./images/KW (2) logo.png" alt="">
+        <img src="./images/newimg.png" alt="">
         <div class="dropdown">
             <span>Categories</span>
             <div class="dropdown-content">
@@ -45,55 +45,214 @@
         </div>
 
 
-
-
-    
+    <div id="cartpage">
 
     <div id="cartcontainer">
 
     </div>
+
+
+    <div id="cart-items">
+       
+        <input type="text" id="coupon" placeholder="Apply Coupons">
+        <button id="couponbtn">Apply</button>
+
+
+
+        <h5>Bill Summary</h5>
+        <p id="total">Total MRP : <span id="totalorder">0</span></p>
+        <p >Discount on Coupon <span id="discount">0</span></p>
+        <p>Amount to be Paid:<span id="amount">0</span></p>
+        <div id="paymentbtn">
+        <button >Make Payment</button>
+        </div>
+    </div>
+        
+    </div>
+    
+    
+
+   
+
+
+   
+
+
+
+
+
+
+
+<!-- ------------------------------------------footer-------------------------------------------------- -->
+
+    
+ <div id="footer">
+    <div>
+    <div>
+    <h4>About KW</h4>
+    <hr>
+    <ul >
+    <li><a href="">KW Careers</a></li>
+    <li><a href="">About Us</a></li>
+    <li><a href="">Investor Information</a></li>
+    <li><a href="">Organizational Accounts</a></li>
+    <li><a href="">KW Me</a></li>
+    <li><a href="">Literacy Foundation</a></li>
+    <li><a href="">Newsroom</a></li>
+    <li><a href="">Alternative Dispute Resolution</a></li>
+    <li><a href="">Vendors</a></li>
+    <li><a href="">New Vendors</a></li>
+    <li><a href="">Serving Others</a></li>
+   </ul>
+   </div>
+   
+    <div>
+    <h4>Support</h4>
+    <hr>
+    <ul >
+     <li><a href="">Help Center</a></li>
+     <li><a href="">Track My Order</a></li>
+     <li><a href="">Product Recalls</a></li>
+     <li><a href="">Gift Card Balance</a></li>
+     <li><a href="">Accessibility Statement</a></li>
+     <li><a href="">Accessibility Support</a></li>
+     <li><a href="">California Supply Chain Act</a></li>
+     <li><a href="">California Privacy Notice for Employees, Applicants & Contractors</a></li>
+     <li><a href="">Your Privacy Choices</a></li>
+     <li><a href="">Cookie Preferences</a></li>
+    </ul>
+    </div>
+    
+    <div>
+    <h4>Stores</h4>
+    <hr>
+    <ul >
+     <li><a href="">Store Locator</a></li>
+     <li><a href="">Store Directory</a></li>
+     <li><a href="">Store Survey(receipt required)</a></li>
+     <li><a href="">KW Market</a></li>
+     <li><a href="">KW Market+pOpshelf</a></li>
+     <li><a href="">pOpshelf</a></li>
+     <li><a href="">KWx</a></li>
+    </ul>
+    </div>
+   
+    <div>
+     <h4>Services</h4>
+     <hr>
+     <ul >
+       <li><a href="">FedEx</a></li>
+       <li><a href="">DoorDash</a></li>
+       <li><a href="">KW Pickup</a></li>
+       <li><a href="">KW GO! & Cart Calculator</a></li>
+       <li><a href="">Download App</a></li>
+       <li><a href="">Coupons</a></li>
+       <li><a href="">spendwell</a></li>
+       <li><a href="">Western Union</a></li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div id="last">
+     <div>
+       <img src="https://www.dollargeneral.com/content/experience-fragments/dollargeneral/en/global-footer/master/_jcr_content/root/globalfooter/link-images/image.coreimg.100.300.png/1661991107545/foot-logo-dg-careers.png" alt="">
+     </div>
+     <div>
+     <img src="https://www.dollargeneral.com/content/experience-fragments/dollargeneral/en/global-footer/master/_jcr_content/root/globalfooter/app-images/image.coreimg.100.300.png/1661990967164/app-store.png" alt="">
+     <img src="https://www.dollargeneral.com/content/experience-fragments/dollargeneral/en/global-footer/master/_jcr_content/root/globalfooter/app-images/image_205323551.coreimg.100.300.png/1661990917826/google.png" alt="">
+   </div>
+   <div>
+     <img src="./images/Screenshot (62).png" alt="">
+   </div>
+   <p>Privacy | Terms</p>
+   <p>© Copyright 2023. Kiranawala General Corporation. All rights reserved.</p>
+   </div> -->
+   
+   
+   
 </body>
 </html>
 <script>
     let Cart=JSON.parse(localStorage.getItem("cart")) || [];
+
+    let total=document.getElementById("totalorder")
     let Container=document.getElementById("cartcontainer");
-    function DisplayFood(data){
+    function Display(data){
         Container.innerHTML=null;
-        Cart.forEach((food)=>{
+        Cart.forEach((el)=>{
             let card=document.createElement("div")
             let imgdiv=document.createElement("div")
             let img=document.createElement("img")
-            img.src=food.img;
-
+            img.src=el.img;
+            let contentdiv=document.createElement("div")
             let name=document.createElement("h2")
-            name.textContent=food.name;
+            name.textContent=el.name;
 
             let price=document.createElement("h4")
-            price.textContent=`₹${food.price}`;
+            price.textContent=`₹${el.price}`;
 
             let rating=document.createElement("h4")
-            rating.textContent=`Rating:-${food.rating}/5`;
+            rating.textContent=`Rating:-${el.rating}/5`;
 
             let desc=document.createElement("p")
-            desc.textContent=food.desc;
+            desc.textContent=el.desc;
              
-            // let addToCart=document.createElement("button")
-            // addToCart.textContent="Add to Cart"
+            let Delete=document.createElement("button")
+            Delete.textContent="Remove"
 
-            // addToCart.addEventListener("click",()=>{
-            //     if(checkDuplicate(food)){
-            //         alert("Product Already in Cart")
-            //     }else{
-            //         cartArr.push({...food,quantity:1})
-            //     localStorage.setItem("cart",JSON.stringify(cartArr))
-            //     alert("Product Added in Cart")
-            //     }
-            // })
+            let increment=document.createElement("button")
+            increment.textContent="+"
+            let decrement=document.createElement("button")
+            decrement.textContent="-"
+            let quantity=document.createElement("span")
+            quantity.textContent=el.quantity
+
+
+            Delete.addEventListener("click",()=>{
+               Cart=Cart.filter((ele)=>{
+                return ele.id!==el.id
+               })
+               localStorage.setItem("cart",JSON.stringify(Cart))
+               Display()
+            })
+            increment.addEventListener("click",()=>{
+                el=el.quantity++
+                localStorage.setItem("cart",JSON.stringify(Cart))
+               Display()
+            })
+            decrement.addEventListener("click",()=>{
+                if(el.quantity>1){
+                    el=el.quantity--
+                localStorage.setItem("cart",JSON.stringify(Cart))
+               Display()
+                }
+            })
             imgdiv.append(img)
-            card.append(imgdiv,name,price,rating,desc)
+            contentdiv.append(name,price,rating,desc,increment,quantity,decrement,Delete)
+            card.append(imgdiv,contentdiv)
             Container.append(card)
 
         })
+
+        let sum=0;
+        for(let i=0;i<Cart.length;i++){
+            sum+=Cart[i].quantity*Cart[i].price
+        }
+        total.innerText=sum
+
+        let amount=document.getElementById("amount")
+        let discount=document.getElementById("discount")
+        let input=document.getElementById("coupon")
+        let couponBtn=document.getElementById("couponbtn")
+        couponBtn.addEventListener("click",()=>{
+    
+            if(input.value=="25"){
+            discount.innerText=sum*0.25
+            amount.innerText=sum-(sum*0.25)
+            }else{
+            amount.innerText=sum
+            }
+        })
      }
-     DisplayFood()
+     Display()
 </script>
